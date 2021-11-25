@@ -79,6 +79,15 @@ Sehingga pembagian IP yang memungkinkan dalam topologi seperti gambar berikut:
 	- IP pada interface FOOSHA yang mengarah ke DORIKI Server `(Eth1/1)`
 	![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/foosha_doriki.jpg)
 
+   - Routing menuju **A9** dengan NID `10.46.8.0/22` via `10.46.8.2`, menuju **A10** dengan NID `10.46.12.0/22` via `10.46.27.154`, menuju **A15** dengan NID `10.46.27.172/30` via `10.46.27.174`, menuju **A12** dengan NID `10.46.0.0/21` via `10.46.27.154`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/staticroute1.jpg)
+  
+   - Routing menuju **A13** dengan NID `10.46.27.0/25` via `10.46.27.154`, menuju **A4** dengan NID `10.46.20.0/22` via `10.46.27.150`, menuju **A6** dengan NID `10.46.24.0/23` via `10.46.27.150`, menuju **A5** dengan NID `10.46.27.128/28` via `10.46.27.150`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/staticroute2.jpg)
+  
+   - Routing menuju **A14** dengan NID `10.46.27.168/30` via `10.46.27.150`, menuju **A2** dengan NID `10.46.26.0/24` via `10.46.27.150`, menuju **A1** dengan NID `10.46.16.0/22` via `10.46.27.150`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/staticroute3.jpg)
+
 - BLUENO (Sebagai Klien)
 	- IP pada Configuration Blueno yang mengarah ke FOOSHA `(Fa0)`
 	![Foto](./img/VLSMsoalShiftmodul4/Blueno(klien)/bluenoconf.jpg)
