@@ -167,6 +167,43 @@ Sehingga pembagian IP yang memungkinkan dalam topologi seperti gambar berikut:
 	- IP pada Configuration JORGE yang mengarah ke ALABASTA `(Fa0)`
 	![Foto](./img/VLSMsoalShiftmodul4/Jorge(klien)/jorgeconf.jpg)
 
+- OIIMO (Sebagai Router)
+	- IP pada interface OIIMO yang mengarah ke ENIESLOBBY dan SEASTONE `(Fa0/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Oiimo(router)/oiimo_enieslobby_seastone.jpg)
+
+	- IP pada interface OIIMO yang mengarah ke FUKUROU `(Fa1/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Oiimo(router)/oiimo_fukurou.jpg)
+
+	- IP pada interface OIIMO yang mengarah ke GUANHAO `(Fa0/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Oiimo(router)/oiimo_guanhao.jpg)
+
+   - Routing untuk mengijinkan segala aktivitas paket yang menuju ke FOOSHA melalui **A3** dengan NID `0.0.0.0/0` via `10.46.27.145`,  menuju **A1** dengan NID `10.46.16.0/22` via `10.46.26.2`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Oiimo(router)/staticroute.jpg)
+
+- FUKUROU (Sebagai Klien)
+	- IP pada Configuration FUKUROU yang mengarah ke OIIMO `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Fukurou(klien)/fukurouconf.jpg)
+
+- ENIESLOBBY (Sebagai Klien)
+	- IP pada Configuration ENIESLOBBY yang mengarah ke OIIMO `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/EniesLobby(klien)/enieslobbyconf.jpg)
+
+- SEASTONE (Sebagai Router)
+	- IP pada interface SEASTONE yang mengarah ke ELENA `(Fa0/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Seastone(router)/seastone_elena.jpg)
+
+	- IP pada interface SEASTONE yang mengarah ke OIIMO `(Fa0/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Seastone(router)/seastone_oiimo.jpg)
+
+   - Routing untuk mengijinkan segala aktivitas paket yang menuju ke FOOSHA melalui **A2** dengan NID `0.0.0.0/0` via `10.46.26.1`,  menuju **A1** dengan NID `10.46.16.0/22` via `10.46.26.2`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Seastone(router)/staticroute.jpg)
+
+
+- ELENA (Sebagai Klien)
+	- IP pada Configuration ELENA yang mengarah ke SEASTONE `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Elena(klien)/elenaconf.jpg)
+
+
 <br>
 
 ## CIDR
