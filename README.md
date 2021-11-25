@@ -118,11 +118,54 @@ Sehingga pembagian IP yang memungkinkan dalam topologi seperti gambar berikut:
 - PUCCI (Sebagai Router)
 	- IP pada interface PUCCI yang mengarah ke WATER7 `(Fa0/0)`
 	![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/pucci_water7.jpg)
+
 	- IP pada interface PUCCI yang mengarah ke CALMBELT dan COURT YARD `(Fa0/1)`
 	![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/pucci_calmbelt_courtyard.jpg)
+
 	- IP pada interface PUCCI yang mengarah ke JIPANGU `(Fa1/0)`
 	![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/pucci_jipangu.jpg)
 
+   - Routing untuk mengijinkan segala aktivitas paket yang menuju ke Water7 yang nantinya akan diteruskan ke FOOSHA melalui **A11** dengan NID `0.0.0.0/0` via `10.46.27.161`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/staticroute.jpg)
+
+- GUANHAO (Sebagai Router)
+	- IP pada interface GUANHAO yang mengarah ke FOOSHA `(Fa1/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Guanhao(router)/guanhao_foosha.jpg)
+
+	- IP pada interface GUANHAO yang mengarah ke JABRA `(Fa0/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Guanhao(router)/guanhao_jabra.jpg)
+
+	- IP pada interface GUANHAO yang mengarah ke MAINGATE dan ALABASTA `(Fa0/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Guanhao(router)/guanhao_maingate_alabasta.jpg)
+
+	- IP pada interface GUANHAO yang mengarah ke OIIMO `(Fa1/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Guanhao(router)/guanhao_oiimo.jpg)
+
+   - Routing untuk mengijinkan segala aktivitas paket yang menuju ke FOOSHA melalui **A7** dengan NID `0.0.0.0/0` via `10.46.27.149`,  menuju **A5** dengan NID `10.46.27.128/28` via `10.46.24.2`,  menuju **A14** dengan NID `10.46.27.168/30` via `10.46.27.146`,  menuju **A2** dengan NID `10.46.26.0/24` via `10.46.27.146`,  menuju **A1** dengan NID `10.46.16.0/22` via `10.46.27.146` :
+   ![Foto](./img/VLSMsoalShiftmodul4/Guanhao(router)/staticroute1.jpg)
+   ![Foto](./img/VLSMsoalShiftmodul4/Guanhao(router)/staticroute2.jpg)
+
+- JABRA (Sebagai Klien)
+	- IP pada Configuration JABRA yang mengarah ke GUANHAO `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Jabra(klien)/jabraconf.jpg)
+
+- MAINGATE (Sebagai Klien)
+	- IP pada Configuration MAINGATE yang mengarah ke GUANHAO `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/MainGate(klien)/maingateconf.jpg)
+
+- ALABASTA (Sebagai Router)
+	- IP pada interface ALABASTA yang mengarah ke GUANHAO `(Fa0/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Alabasta(router)/alabasta_guanhao.jpg)
+
+	- IP pada interface ALABASTA yang mengarah ke JORGE `(Fa0/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Alabasta(router)/alabasta_jorge.jpg)
+
+   - Routing untuk mengijinkan segala aktivitas paket yang menuju ke FOOSHA melalui **A6** dengan NID `0.0.0.0/0` via `10.46.24.1`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Alabasta(router)/staticroute.jpg)
+
+- JORGE (Sebagai Klien)
+	- IP pada Configuration JORGE yang mengarah ke ALABASTA `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Jorge(klien)/jorgeconf.jpg)
 
 <br>
 
