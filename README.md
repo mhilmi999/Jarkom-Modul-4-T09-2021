@@ -83,11 +83,111 @@ Sehingga pembagian IP yang memungkinkan dalam topologi seperti gambar berikut:
 	
 ## CIDR
 ---
-Buatlah topologi jaringan dengan kriteria sebagai berikut: `EniesLobby` sebagai `DNS Server`, `Jipangu` sebagai `DHCP Server`, `Water7` sebagai `Proxy Server`.
+Perhitungan `Subnetting` CIDR.
 
 ## Jawaban Soal CIDR 
 ---
 Pertama-tama kami membuat sebuah node yang terhubung dengan internet dengan nama NAT1. Node tersebut kemudian disambungkan dengan router foosha melalui interface `nat0` menuju interface `eth0`. Selanjutnya persiapkan peletakan node-node sesuai dengan yang ada pada [Soal Shift](https://docs.google.com/document/d/1hwuI5YpxiP-aboS7wGWPbaQeSOQl0HHVHLT3ws2BPUk/edit)
 
-![Foto](./img/no1/topologi.jpg)
+![Foto](./img/CIDRsoalShiftModul4/topologi.png)
 <br>
+
+## Jawaban Soal CIDR 
+---
+   1. Setelah topologi tersebut dibuat, kami beranjak ke langkah selanjutnya yaitu dengan menentukan subnet yang ada dalam topologi dan melakukan `labelling netmask` terhadap masing-masing subnet. Contohnya dapat dilihat pada gambar dibawah 
+
+   ![Foto](./img/CIDRsoalShiftModul4/topologiVLSMsoalShiftModul4.jpg)
+   <br>
+
+   Pada gambar diatas, dapat dilihat tedapat `15 Subnet` yang terbentuk. 
+   
+   2. Langkah selanjutnya adalah menggabungkan subnet-subnet tersebut menjadi subnet yang lebih besar, disini kita ambil contoh seperti pada gambar dibawah. 
+
+   ![Foto](./img/CIDRsoalShiftModul4/topologiCIDRABsoalShiftModul4.jpg)
+   <br>
+
+   Terlihat pada gambar diatas, subnet  **A1** dan **A2** digabung membentuk subnet yang lebih besar yaitu **B1**. Karena jumlah subnet A adalah ganjil, maka pada penggabungan subnet A menjadi subnet B, ada satu subnet yang tidak ikut digabungkan, yaitu **A15**.
+
+   ```txt 
+   Mengikuti aturan penggabungan, dimana subnet kecil hanya dapat digabungkan menjadi subnet yang lebih besar dengan menggabungkan 2 subnet.
+   ``` 
+
+   Maka dari itu, **A15** nantinya akan digabungkan dengan subnet **B7** membentuk subnet yang lebih besar yaitu **C4**. Untuk lebih jelasnya bisa dilihat pada gambar dibawah ini
+
+   ![Foto](./img/CIDRsoalShiftModul4/topologiCIDRABCsoalShiftModul4.jpg)
+   <br>
+
+   Selanjutnya Subnet C akan digabungkan menjadi 2 subnet yang lebih besar yang dinamakan **D1** dan **D2**. 
+
+   ![Foto](./img/CIDRsoalShiftModul4/topologiCIDRABCDsoalShiftModul4.jpg)
+   <br>
+
+   Dan yang terakhir subnet **D1** dan **D2** akan digabungkan membentuk 1 Subnet lebih besar dinamakan **E1**. Terlihat pada gambar dibawah
+
+   ![Foto](./img/CIDRsoalShiftModul4/topologiCIDRABCDEsoalShiftModul4.jpg)
+   <br>
+
+   Untuk lebih jelasnya, berikut dilampirkan tabel berisi Netmask dan juga Penggabungan Subnet pada topologi diatas :
+
+   SUBNET | ASAL SUBNET
+   ------------------- | --------------		
+   B1| A1 + A2
+   B2| A3 + A14
+   B3| A4 + A7
+   B4| A5 + A6
+   B5| A12 + A13
+   B6| A10 + A11
+   B7| A8 + A9
+   C1| B1 + B2
+   C2| B3 + B4
+   C3| B5 + B6
+   C4| B7 + A15
+   D1| C1 + C2
+   D2| C3 + C4
+   E1| D1 + D2
+
+Dibawah ini juga akan dilampirkan tabel Netmask dari masing-masing Subnet. 
+
+```txt
+Tabel Netmask pada Subnet yang terbentuk setelah penggabungan ini didapatkan dengan menggunakan teknik CIDR subnet gabungan yang akan memiliki netmask yang 1 tingkat di atas subnet terbesar yang digabungkan.
+```
+
+   SUBNET | NETMASK
+   ------------------- | --------------		
+   A2| /24
+   A1| /22
+   A3| /30
+   A4| /22
+   A5| /28
+   A6| /23
+   A7| /30
+   A8| /30
+   A9| /22
+   A10| /22
+   A11| /30
+   A12| /21
+   A13| /25
+   A14| /30
+   A15| /30
+   B1| /21
+   B2| /29
+   B3| /21
+   B4| /22
+   B5| /20
+   B6| /21
+   B7| /21
+   C1| /20
+   C2| /20
+   C3| /19
+   C4| /20
+   D1| /19
+   D2| /18
+   E1| /17
+   
+   Setelah perhitungan diatas, kami lanjutkan dengan pembuatan Tree CIDR dari topologi yang sudah kami buat, seperti pada gambar dibawah ini
+
+   ![Foto](./img/CIDRsoalShiftModul4/treeCIDRsoalShiftModul4.jpg)
+   <br>
+   
+   Subnet yang terlihat pada `Tree CIDR` diatas terbentuk dengan menulis ulang proses penggabungan Subnet seperti pada gambar Topologi yang dilingakar-lingakari pada gambar sebelumnya. Sedangkan untuk ip addres yang ada, diambil dengan menyesuaikan netmask dari masing-masing subnet. 
+
