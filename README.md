@@ -99,10 +99,16 @@ Sehingga pembagian IP yang memungkinkan dalam topologi seperti gambar berikut:
 - WATER7 (Sebagai Router)
 	- IP pada interface WATER7 yang mengarah ke FOOSHA `(Fa0/0)`
 	![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/water7_foosha.jpg)
+
 	- IP pada interface WATER7 yang mengarah ke PUCCI `(Fa0/1)`
 	![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/water7_pucci.jpg)
+
 	- IP pada interface WATER7 yang mengarah ke WATER7 `(Fa1/0)`
 	![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/water7_cipher.jpg)
+
+   - Routing menuju **A12** dengan NID `10.46.0.0/21` via `10.46.27.153`, menuju **A13** dengan NID `10.46.27.0/25` via `10.46.27.162`, dan untuk mengijinkan segala aktivitas paket yang menuju ke FOOSHA melalui **A8** dengan NID `0.0.0.0/0` via `10.46.27.153`:
+   ![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/staticroute.jpg)
+
 	
 - CIPHER (Sebagai Klien)
 	- IP pada Configuration CIPHER yang mengarah ke WATER7 `(Fa0)`
