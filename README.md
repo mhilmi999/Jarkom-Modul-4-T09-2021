@@ -69,18 +69,48 @@ Sehingga pembagian IP yang memungkinkan dalam topologi seperti gambar berikut:
 3. Setting IP untuk masing-masing interface yang ada di setiap device sesuai dengan pembagian subnet pada pohon VLSM. Interface dapat diatur pada menu Config > INTERFACE > “nama interface” pada `Cisco Packet Tracerr`
 - FOOSHA (Sebagai Router)
 	- IP pada interface FOOSHA yang mengarah ke CLOUD `(Fa0/0)`
-	![Foto](./img/VLSMsoalShiftmodul4/.jpg)
+	![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/foosha_cloud.jpg)
 	- IP pada interface FOOSHA yang mengarah ke BLUENO (1000 Host) `(Fa0/1)`
-	![Foto](./img/VLSMsoalShiftmodul4/.jpg)
+	![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/foosha_blueno.jpg)
 	- IP pada interface FOOSHA yang mengarah ke WATER7 `(Eth1/0)`
-	![Foto](./img/VLSMsoalShiftmodul4/.jpg)
+	![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/foosha_water7.jpg)
 	- IP pada interface FOOSHA yang mengarah ke GUANHAO `(Eth1/2)`
-	![Foto](./img/VLSMsoalShiftmodul4/.jpg)
+	![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/foosha_guanhao.jpg)
 	- IP pada interface FOOSHA yang mengarah ke DORIKI Server `(Eth1/1)`
-	![Foto](./img/VLSMsoalShiftmodul4/.jpg)
-	<br>
+	![Foto](./img/VLSMsoalShiftmodul4/Foosha(router)/foosha_doriki.jpg)
 
+- BLUENO (Sebagai Klien)
+	- IP pada Configuration Blueno yang mengarah ke FOOSHA `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Blueno(klien)/bluenoconf.jpg)
+
+- DORIKI (Sebagai Server)
+	- IP pada Configuration Doriki yang mengarah ke FOOSHA `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Doriki(server)/dorikiconf.jpg)
+
+- WATER7 (Sebagai Router)
+	- IP pada interface WATER7 yang mengarah ke FOOSHA `(Fa0/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/water7_foosha.jpg)
+	- IP pada interface WATER7 yang mengarah ke PUCCI `(Fa0/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/water7_pucci.jpg)
+	- IP pada interface WATER7 yang mengarah ke WATER7 `(Fa1/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Water7(router)/water7_cipher.jpg)
 	
+- CIPHER (Sebagai Klien)
+	- IP pada Configuration CIPHER yang mengarah ke WATER7 `(Fa0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Cipher(klien)/cipherconf.jpg)
+	
+
+- PUCCI (Sebagai Router)
+	- IP pada interface PUCCI yang mengarah ke WATER7 `(Fa0/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/pucci_water7.jpg)
+	- IP pada interface PUCCI yang mengarah ke CALMBELT dan COURT YARD `(Fa0/1)`
+	![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/pucci_calmbelt_courtyard.jpg)
+	- IP pada interface PUCCI yang mengarah ke JIPANGU `(Fa1/0)`
+	![Foto](./img/VLSMsoalShiftmodul4/Pucci(router)/pucci_jipangu.jpg)
+
+
+<br>
+
 ## CIDR
 ---
 Perhitungan `Subnetting` CIDR.
@@ -92,26 +122,19 @@ Pertama-tama kami membuat sebuah node yang terhubung dengan internet dengan nama
 ![Foto](./img/CIDRsoalShiftModul4/topologi.png)
 <br>
 
-## Jawaban Soal CIDR 
----
-   1. Setelah topologi tersebut dibuat, kami beranjak ke langkah selanjutnya yaitu dengan menentukan subnet yang ada dalam topologi dan melakukan `labelling netmask` terhadap masing-masing subnet. Contohnya dapat dilihat pada gambar dibawah 
 
+   1. Setelah topologi tersebut dibuat, kami beranjak ke langkah selanjutnya yaitu dengan menentukan subnet yang ada dalam topologi dan melakukan `labelling netmask` terhadap masing-masing subnet. Contohnya dapat dilihat pada gambar dibawah 
    ![Foto](./img/CIDRsoalShiftModul4/topologiVLSMsoalShiftModul4.jpg)
    <br>
-
    Pada gambar diatas, dapat dilihat tedapat `15 Subnet` yang terbentuk. 
    
    2. Langkah selanjutnya adalah menggabungkan subnet-subnet tersebut menjadi subnet yang lebih besar, disini kita ambil contoh seperti pada gambar dibawah. 
-
    ![Foto](./img/CIDRsoalShiftModul4/topologiCIDRABsoalShiftModul4.jpg)
    <br>
-
    Terlihat pada gambar diatas, subnet  **A1** dan **A2** digabung membentuk subnet yang lebih besar yaitu **B1**. Karena jumlah subnet A adalah ganjil, maka pada penggabungan subnet A menjadi subnet B, ada satu subnet yang tidak ikut digabungkan, yaitu **A15**.
-
    ```txt 
    Mengikuti aturan penggabungan, dimana subnet kecil hanya dapat digabungkan menjadi subnet yang lebih besar dengan menggabungkan 2 subnet.
    ``` 
-
    Maka dari itu, **A15** nantinya akan digabungkan dengan subnet **B7** membentuk subnet yang lebih besar yaitu **C4**. Untuk lebih jelasnya bisa dilihat pada gambar dibawah ini
 
    ![Foto](./img/CIDRsoalShiftModul4/topologiCIDRABCsoalShiftModul4.jpg)
