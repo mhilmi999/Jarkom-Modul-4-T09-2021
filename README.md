@@ -312,6 +312,8 @@ Tabel Netmask pada Subnet yang terbentuk setelah penggabungan ini didapatkan den
 `Tree CIDR` sudah dibuat kita akan melanjutkannya di GNS, berikut topologinya :
    
 ![Foto](./img/cidr.gns/cidr.1.jpeg)
+
+
    
  Pertama kita melakukan konfigurasi terlebih dahulu disetiap router, server dan pcnya. 
  Di foosha kita melakukan kofigurasi di eth0, eth1, eth2, eth3, dan eth4. eth0 untuk natnya/internetnya, eth1 untuk posisi atas, eth2 untuk posisi kanan, eth3 untuk posisi kiri dan eth4 untuk posisi bawah.
@@ -346,15 +348,39 @@ iface eth4 inet static
 	broadcast 10.46.20.3
 ```
 
+
 ![Foto](./img/cidr.gns/foosha.cidr.2.jpeg)
 
 ![Foto](./img/cidr.gns/foosha.cidr.3.jpeg)
 
+Konfigurasi Blueno
 
-   
+![Foto](./img/cidr.gns/blueno.cidr.4.jpeg)
      
- 
-   
-  
-   
+Konfigurasi Doriki
+
+![Foto](./img/cidr.gns/doriki.cidr.17.jpeg)
+
+konfigurasi water7 
+
+![Foto](./img/cidr.gns/water7.cidr.10.jpeg)
+
+![Foto](./img/cidr.gns/water7.cidr.11.jpeg)
+
+Konfigurasi Guanhao
+
+![Foto](./img/cidr.gns/guanhao.cidr.18.jpeg)
+
+![Foto](./img/cidr.gns/guanhao.cidr.19.jpeg)
+
+Di posisi Kiri foosha atau eth3 bertemu dengan router water7 yang terhubung dengan router pucci dan cipher
+Melakukan konf di cipher
+
+![Foto](./img/cidr.gns/cipher.cidr.13.jpeg)
+
+konf router pucci
+
+![Foto](./img/cidr.gns/pucci.cidr.13.jpeg)
+
+![Foto](./img/cidr.gns/pucci.cidr.14.jpeg)
 
