@@ -307,11 +307,19 @@ Tabel Netmask pada Subnet yang terbentuk setelah penggabungan ini didapatkan den
    ![Foto](./img/CIDRsoalShiftModul4/treeCIDRsoalShiftModul4.jpg)
    <br>
    
-   Subnet yang terlihat pada `Tree CIDR` diatas terbentuk dengan menulis ulang proses penggabungan Subnet seperti pada gambar Topologi yang dilingakar-lingakari pada gambar sebelumnya. Sedangkan untuk ip addres yang ada, diambil dengan menyesuaikan netmask dari masing-masing subnet. 
+   Subnet yang terlihat pada `Tree CIDR` diatas terbentuk dengan menulis ulang proses penggabungan Subnet seperti pada gambar Topologi yang dilingakar-lingakari pada gambar  sebelumnya. Sedangkan untuk ip addres yang ada, diambil dengan menyesuaikan netmask dari masing-masing subnet. 
    
-   `Tree CIDR` sudah dibuat kita akan melnjutnya implentasinya di GNS, berikut topologinya :
+   `Tree CIDR` sudah dibuat kita akan melanjutkannya di GNS, berikut topologinya :
    
    ![Foto](./img/cidr.gns/cidr.1.jpeg)
+   
+   pertama kita melakukan konfigurasi terlebih dahulu disetiap router, server dan pcnya. 
+   Di foosha kita melakukan kofigurasi di eth0, eth1, eth2, eth3, dan eth4
+   
+   
+   
+     
+ 
    
   
    
