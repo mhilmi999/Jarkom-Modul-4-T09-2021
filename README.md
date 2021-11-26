@@ -384,3 +384,65 @@ konf router pucci
 
 ![Foto](./img/cidr.gns/pucci.cidr.14.jpeg)
 
+Di router pucci terhubung dengan 3 pc yaitu Jipangu, Calmbelt, dan Courtyart
+Konf Jipangu
+
+![Foto](./img/cidr.gns/jipangu.cidr.15.jpeg)
+
+konf Calmbelt
+
+![Foto](./img/cidr.gns/calmbelt.cidr.16.jpeg)
+
+konf Courtyart
+
+![Foto](./img/cidr.gns/courtyart.cidr.16.jpeg)
+
+Setelah di kiri foosha sudah diconf kita pindah kebagian bawah foosha atau eth4
+
+Di bagian router Guanhao terdapat 4 eth.
+eth1 dibagian kiri, eth2 dibagian kanan dan eth3 dibagian bawah.
+
+konf di eth1 (Jabra)
+
+![Foto](./img/cidr.gns/jabra.cidr.24.jpeg)
+
+lalu ke eth2, kita melakukan konf di Maingate dan router Alabasta
+konf Maingate
+
+![Foto](./img/cidr.gns/maingate.cidr.21.jpeg)
+
+konf Alabasta
+
+![Foto](./img/cidr.gns/alabasta.cidr.22.jpeg)
+
+Di router alabsta terhubung dengan Jorge
+konf Jorge
+
+![Foto](./img/cidr.gns/jorge.cidr.23.jpeg)
+
+selanjutnya ke bagian eth3 (Oiimo)
+konf Oiimo
+
+![Foto](./img/cidr.gns/oiimo.cidr.25.jpeg)
+
+![Foto](./img/cidr.gns/oiimo.cidr.26.jpeg)
+
+Di router Oiimo terdapat 3 eth. eth1 dibagian kanan dan eth2 dibagian kiri.
+
+konf Fukurou
+
+![Foto](./img/cidr.gns/fukurou.cidr.27.jpeg)
+
+konf Enieslobby
+
+![Foto](./img/cidr.gns/enieslobby.cidr.28.jpeg)
+
+Konf Router Seastone
+
+![Foto](./img/cidr.gns/seastone.cidr.29.jpeg)
+
+pada router seastone terdapat 2 eth yang dimana eth0 sebagain penghubung ke router oiimo dan eth1 terhubung ke Elena
+konf Elena 
+
+![Foto](./img/cidr.gns/elena.cidr.31.jpeg)
+
