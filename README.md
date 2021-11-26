@@ -487,7 +487,8 @@ karena pc yang jauh dari water7 lebih banyak di sebelah kiri makan hanya melakuk
 
 Untuk bagian Guanhao akan melakukan routing untuk pc dan server yang jauh dari router guanhao seperti enieslobby, elena, fukurou dab jorge
 
-![Foto](./img/cidr.gns/guanhao.cidr.20.jpeg)
+![Foto](./img/cidr.gns/guanhao.1.jpeg)
+
 
 Pada router oiimo kita melakukan routing untuk elena yang jauh dari oiimo.
 
