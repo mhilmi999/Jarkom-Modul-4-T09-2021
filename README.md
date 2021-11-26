@@ -308,4 +308,9 @@ Tabel Netmask pada Subnet yang terbentuk setelah penggabungan ini didapatkan den
    <br>
    
    Subnet yang terlihat pada `Tree CIDR` diatas terbentuk dengan menulis ulang proses penggabungan Subnet seperti pada gambar Topologi yang dilingakar-lingakari pada gambar sebelumnya. Sedangkan untuk ip addres yang ada, diambil dengan menyesuaikan netmask dari masing-masing subnet. 
+   
+   `Tree CIDR` sudah dibuat kita akan melnjutnya implentasinya di GNS, berikut topologinya :
+   
+   img/cidr.gns/cidr.1.jpeg
+   
 
