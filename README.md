@@ -311,6 +311,8 @@ Tabel Netmask pada Subnet yang terbentuk setelah penggabungan ini didapatkan den
    
    `Tree CIDR` sudah dibuat kita akan melnjutnya implentasinya di GNS, berikut topologinya :
    
-   img/cidr.gns/cidr.1.jpeg
+   ![Foto](./img/cidr.gns/cidr.1.jpeg)
+   
+  
    
 
