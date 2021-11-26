@@ -441,8 +441,45 @@ Konf Router Seastone
 
 ![Foto](./img/cidr.gns/seastone.cidr.29.jpeg)
 
-pada router seastone terdapat 2 eth yang dimana eth0 sebagain penghubung ke router oiimo dan eth1 terhubung ke Elena
+pada router seastone terdapat 2 eth yang dimana eth0 sebagain penghubung ke router oiimo dan eth1 terhubung ke Elena.
+
 konf Elena 
 
 ![Foto](./img/cidr.gns/elena.cidr.31.jpeg)
 
+Setelah semua selesai di konfigurasinya selanjutnya kita membuat script di foosha.
+
+Salin iptables 
+
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.46.0.0/17
+```
+![Foto](./img/cidr.gns/foosha.cidr.5.jpeg)
+
+lalu lakukan routing untuk router,server dan pc yang jauh dari foosha
+
+Routing disebelah kiri 
+
+![Foto](./img/cidr.gns/foosha.cidr.kiri.6.jpeg)
+
+
+kemudian buat lagi Routing untuk bagian bawah foosha
+
+
+![Foto](./img/cidr.gns/foosha.bawah.cidr.7.jpeg)
+
+![Foto](./img/cidr.gns/foosha.bawah.cidr.8.jpeg)
+
+
+Di Water7 kita juga melakukan rounting untuk pc yang jauh dari router water7.
+karena pc yang jauh dari water7 lebih banyak di sebelah kiri makan hanya melakukan routing bagian kiri saja.
+
+![Foto](./img/cidr.gns/water7.kiri.cidr.12.jpeg)
+
+Untuk bagian Guanhao akan melakukan routing untuk pc dan server yang jauh dari router guanhao seperti enieslobby, elena, fukurou dab jorge
+
+![Foto](./img/cidr.gns/guanhao.cidr.20.jpeg)
+
+Pada router oiimo kita melakukan routing untuk elena yang jauh dari oiimo.
+
+![Foto](./img/cidr.gns/oiimo.cidr.30.jpeg)
