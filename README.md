@@ -460,6 +460,11 @@ lalu lakukan routing untuk router,server dan pc yang jauh dari foosha
 
 Routing disebelah kiri 
 
+```
+# routing ke a10 client CIPHER
+route add -net 10.46.48.0 netmask 255.255.252.0 gw 10.46.68.2
+```
+
 ![Foto](./img/cidr.gns/foosha.cidr.kiri.6.jpeg)
 
 
